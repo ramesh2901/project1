@@ -29,8 +29,9 @@ do
 			result=$((num1*num2))
 			echo answer:$result
 			break;;
-			*) echo choose 1 to 3 only!!!!
+			*) echo please choose 1 to 3 only!!!!
 			break;;
+			
 		esac
 		done
 done
