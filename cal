@@ -1,0 +1,37 @@
+#! /bin/bash
+# this is script
+input="yes"
+while [[ $input="yes" ]]
+do
+	PS3="press 1 for addition, 2 for subtraction, 3 for multiplication:"
+	select math in addition subtraction multiplication
+	do
+		case "$math" in 
+			addition) echo "enter first no:"
+			read num1
+			echo "enter second no:"
+			read num2
+			result=$((num1 + num2))
+			echo answer: $result
+			break;;
+			
+			subtraction) echo "enter first no:"
+			read num1
+			echo "enter second no:"
+			read num2
+			result=$((num1 - num2))
+			echo answer:$result
+			break;;
+			multiplication) echo "enter first no:"
+			read num1
+			echo "enter second no:"
+			read num2
+			result=$((num1*num2))
+			echo answer:$result
+			break;;
+			*) echo choose 1 to 3 only!!!!
+			break;;
+		esac
+		done
+done
+
